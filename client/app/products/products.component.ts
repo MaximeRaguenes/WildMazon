@@ -20,6 +20,10 @@ export class ProductsComponent implements OnInit {
   addProductForm: FormGroup;
   name = new FormControl('', Validators.required);
   price = new FormControl('', Validators.required);
+  image = new FormControl('', Validators.required);
+  stock = new FormControl('', Validators.required);
+
+  
 
   constructor(private productService: ProductService,
               private formBuilder: FormBuilder,
@@ -30,6 +34,8 @@ export class ProductsComponent implements OnInit {
     this.addProductForm = this.formBuilder.group({
       name: this.name,
       price: this.price,
+      image: this.image,
+      stock: this.stock,
     });
   }
 

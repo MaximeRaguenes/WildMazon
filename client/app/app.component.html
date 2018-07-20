@@ -12,8 +12,13 @@
             <i class="fa fa-home"></i> Home
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  *ngIf="auth.loggedIn && auth.isAdmin">
           <a routerLink="/products" class="nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> ProductsAdmin
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/productuser" class="nav-link" routerLinkActive="active">
             <i class="fa fa-list"></i> Products
           </a>
         </li>
